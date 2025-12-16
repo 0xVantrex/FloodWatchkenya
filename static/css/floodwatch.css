@@ -1,0 +1,41 @@
+/* FloodWatch Custom CSS */
+.flood-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.flood-low { background-color: #1cc88a; }
+.flood-medium { background-color: #f6c23e; }
+.flood-high { background-color: #e74a3b; }
+.flood-critical { background-color: #dc3545; }
+
+.location-card { border-left: 4px solid #4e73df; }
+.report-card { border-left: 4px solid #1cc88a; }
+.alert-card { border-left: 4px solid #f6c23e; }
+
+.weather-icon {
+    font-size: 2.5rem;
+}
+
+.risk-critical { color: #dc3545; }
+.risk-high { color: #fd7e14; }
+.risk-medium { color: #ffc107; }
+.risk-low { color: #28a745; }
+
+/* Weather cards */
+.card-weather {
+    transition: transform 0.2s;
+}
+
+.card-weather:hover {
+    transform: translateY(-2px);
+}
+
+/* Flood risk badges */
+.badge-risk-low { background-color: #28a745; }
+.badge-risk-medium { background-color: #ffc107; }
+.badge-risk-high { background-color: #fd7e14; }
+.badge-risk-critical { background-color: #dc3545; }

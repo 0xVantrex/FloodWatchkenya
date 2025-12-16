@@ -8,7 +8,7 @@ from .serializers import ReportSerializer
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
 def list_reports(request):
-    reports = Report.objects.filter(user=request.user)
+    reports = Report.objects.filter(created_by=request.user)
     serializer = ReportSerializer(reports, many=True)
     return Response(serializer.data)
 
