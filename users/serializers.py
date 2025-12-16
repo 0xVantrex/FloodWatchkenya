@@ -12,3 +12,9 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
         return super().create(validated_data)
+    
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = ['id', 'county', 'subcounty', 'latitude', 'longitude', 'is_primary', 'created_at']
+        read_only_fields = ['id', 'created_at']
